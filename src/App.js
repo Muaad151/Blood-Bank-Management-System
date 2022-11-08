@@ -1,16 +1,29 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landingpage from './Pages/Landingpage'
+import Request from './Pages/Request'
+import Register from './Pages/Register'
+import Transaction from './Pages/Transaction'
+import Signin from './Pages/Signin'
 import './App.css';
-import Navbar from './Components/Navbar'
-import Main from './Components/Main'
-import Footer from './Components/Footer'
 
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <Main/>
-      <Footer/>
-    </div>
+<>
+       <BrowserRouter>
+         <Routes>
+             <Route path="/" element={<Landingpage/>}/>
+             <Route path="/signin" element={<Signin/>}/>
+             <Route path="/register" element={<Register/>}/>
+             <Route path="/request" element={<Request/>}/>
+             <Route path="/transaction" element={<Transaction/>}/>
+         </Routes>
+       </BrowserRouter>
+
+
+</>
+
+
   );
 }
 

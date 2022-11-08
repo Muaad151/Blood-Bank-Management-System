@@ -2,6 +2,7 @@ import React from 'react'
 import '../Styles/Navbar.css';
 import '../Styles/bootstrap.css';
 import Logo from '../logo.svg'
+import {Link} from "react-router-dom"
 
 
 function Navbar() {
@@ -15,7 +16,7 @@ function Navbar() {
              <img src={Logo} alt="Logo" id="Layer_1" />
             
 
-                    <a className="navbar-brand" href="google.com">Navbar</a>
+                    <Link className="navbar-brand" to="/">Navbar</Link>
                     <div className="collapse navbar-collapse  text-white" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <a className="nav-link active  text-white" aria-current="page" href="google.com">Home</a>
@@ -24,8 +25,8 @@ function Navbar() {
                         </div>
                     </div>
                     <form className="form-inline my-2 my-lg-0">
-                        <button className="custom-btn btn-16">Sign in</button>
-                        <button className="custom-btn btn-16">Log in</button>
+                        <Link className="custom-btn btn-16" to="/signin">Sign in</Link>
+                        <Link className="custom-btn btn-16" to="/signin">Log in</Link>
                     </form>
         </div>
     </nav>

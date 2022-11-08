@@ -8,7 +8,7 @@ function Footer() {
 
   <footer className="site-footer fluid">
     <div className="container">
-        <div className="row">
+        <div className="row kas">
             <div className="col-sm-12 col-md-6">
                 <h6>About</h6>
                 <p className="text-justify">This is a group Project made as a part of DBMS lab.The main purpose of blood bank management web application system DBMS mini project is to provide the blood bank with an easier way to store and retrieve data and keep a record of the
@@ -30,7 +30,7 @@ function Footer() {
         <hr/>
     </div>
     <div className="container">
-        <div className="row">
+        <div className="row ">
             <div className="col-md-8 col-sm-6 col-xs-12">
                 <p className="copyright-text">Copyright &copy; 2022 All Rights Reserved
                 </p>
