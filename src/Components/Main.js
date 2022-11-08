@@ -2,9 +2,8 @@ import React from 'react'
 import '../Styles/Main.css';
 import '../Styles/bootstrap.css';
 import {Link} from "react-router-dom"
-
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faSearch} from "@fortawesome/free-solid-svg-icons"
 function Main() {
   return (  
       <>
@@ -17,8 +16,8 @@ function Main() {
         </div>
         <div className="row mt-2">
             <div className="b1 col-6">
-                <h1 className="count-1">157 <i className="fa-solid fa-raindrops"></i></h1>
-                <p className="count-description">New blood requests </p>
+                <h1 className="count-1">157 </h1>
+                <p className="count-description">New blood requests</p>
             </div>
             <div className="b1 col-6">
                 <h1 className="count-2">43</h1>
@@ -30,7 +29,8 @@ function Main() {
 
     <main className="main-options">
         <div className="square">
-            <i className="fa-sharp fa-solid fa-magnifying-glass btn-icon"></i>
+            <FontAwesomeIcon className="fa-sharp fa-solid fa-magnifying-glass btn-icon" icon={faSearch}/>
+
             <Link to="/register" class="text-center">Registration</Link>
         </div>
 
