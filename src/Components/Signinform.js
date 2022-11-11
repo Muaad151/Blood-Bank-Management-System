@@ -1,18 +1,34 @@
 
 import React from 'react'
+import {useState,useEffect} from "react"
 import "../Styles/Signin.css"
 import "../Styles/bootstrap.css"
 
 
 function Signin() {
+  
+  let [flag, setflag]= useState(true);
+
+  useEffect(()=>{
+      setflag(true);    
+  },[]);
+
+  function trigger(e){
+          if(e.target.classList.contains("a")){
+              e.target.style.borderBottom="solid 2px #1059FF";
+              document.querySelector(".b").style.borderBottom="";              
+            }else{
+              e.target.style.borderBottom="solid 2px #1059FF";
+              document.querySelector(".a").style.borderBottom="";              
+          }
+  }
+
   return ( 
-        
 <div className="container-signin">
   <div className="frame3">
     <div className="nav">
       <ul className="links">
-        <li className="signin-active"><a className="btn" href="google.com">Sign in</a></li>
-        <li className="signup-inactive"><a className="btn" href="google.com">Sign up </a></li>
+        {flag && <li className="signin-active "><button className="btn a"  onClick={trigger}>Sign in</button></li>}
       </ul>
     </div>
 

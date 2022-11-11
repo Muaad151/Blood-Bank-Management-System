@@ -56,18 +56,26 @@ li {
   color: #ffffff;
 }
 
-.signin-active a {
+.signin-active button {
   padding-bottom: 10px;
   color: #ffffff;
   text-decoration: none;
-  border-bottom: solid 2px #1059FF;
   transition: all .25s ease;
   cursor: pointer;
 }
 
-.signin-inactive a {
+.signup-active button {
+  padding-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+
+.signin-inactive button {
   padding-bottom: 0;
-  color: rgba(255, 255, 255, .3);
+  color: rgba(227, 223, 223, 0.3);
   text-decoration: none;
   border-bottom: none;
   cursor: pointer;

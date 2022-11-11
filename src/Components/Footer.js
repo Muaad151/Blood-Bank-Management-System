@@ -3,6 +3,7 @@ import '../Styles/Footer.css';
 import '../Styles/bootstrap.css';
 
 
+
 function Footer() {
   return ( 
 
@@ -38,10 +39,6 @@ function Footer() {
 
             <div className="col-md-4 col-sm-6 col-xs-12">
                 <ul className="social-icons">
-                    <li><a className="facebook" href="google.com"><i className="fa fa-facebook"></i></a></li>
-                    <li><a className="twitter" href="google.com"><i className="fa fa-twitter"></i></a></li>
-                    <li><a className="dribbble" href="google.com"><i className="fa fa-dribbble"></i></a></li>
-                    <li><a className="linkedin" href="google.com"><i className="fa fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>

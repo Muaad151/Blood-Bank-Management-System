@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Styles/Navbar.css';
 import '../Styles/bootstrap.css';
-import Logo from '../logo.svg'
+import Logo from '../arjun.svg'
 import {Link} from "react-router-dom"
 
 
@@ -14,19 +14,13 @@ function Navbar() {
           <div className="container-fluid">
 
              <img src={Logo} alt="Logo" id="Layer_1" />
-            
-
-                    <Link className="navbar-brand" to="/">Navbar</Link>
+                    <Link className="navbar-brand" to="/">Life Bank</Link>
                     <div className="collapse navbar-collapse  text-white" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <a className="nav-link active  text-white" aria-current="page" href="google.com">Home</a>
-                            <a className="nav-link  text-white" href="google.com">Features</a>
-                            <a className="nav-link  text-white" href="google.com">Pricing</a>
                         </div>
                     </div>
                     <form className="form-inline my-2 my-lg-0">
                         <Link className="custom-btn btn-16" to="/signin">Sign in</Link>
-                        <Link className="custom-btn btn-16" to="/signin">Log in</Link>
                     </form>
         </div>
     </nav>
