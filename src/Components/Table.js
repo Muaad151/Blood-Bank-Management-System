@@ -6,39 +6,18 @@ import axios from "axios"
 function Table() {
 
   let [info, setinfo]= useState([]);
-
   useEffect(()=>{
 
-    setinfo([
-      {
-        date_of_transaction:"12/1/2022",
-        time_of_transaction:"1:30",
-        status:"SUCCESS",
-        t_type:"Donation"
-      },
-      {
-        date_of_transaction:"12/1/2022",
-        time_of_transaction:"1:30",
-        status:"SUCCESS",
-        t_type:"Donation"
-      },
-      {
-        date_of_transaction:"12/1/2022",
-        time_of_transaction:"1:30",
-        status:"SUCCESS",
-        t_type:"Donation"
-      }
-    ])
+    axios.get("http://localhost:4000/get_data",{})
+    .then((res)=>{
+      console.log(res);
+      setinfo(res.data);
+    })
+    .catch((err)=>{
+      throw err;
+    })  
   
   },  [])
-
-  axios.post("http://localhost:4000/get_data",{})
-  .then((res)=>{
-    setinfo(res);
-  })
-  .catch((err)=>{
-    throw err;
-  })
 
 
   return ( 
@@ -60,7 +39,7 @@ function Table() {
           return (
           <tr>
             <th scope="row">{index+1}</th>
-            <td>{item.date_of_transaction}</td>
+            <td>{item.date_of_transaction.substr(0,10)}</td>
             <td>{item.time_of_transaction}</td>
             <td>{item.t_type}</td>
             <td>{item.status}</td>

@@ -3,10 +3,28 @@ import React from 'react'
 import {useState,useEffect} from "react"
 import "../Styles/Signin.css"
 import "../Styles/bootstrap.css"
-
-
+import axios from 'axios';
+import swal from 'sweetalert';
 function Signin() {
-  
+  const axiosPost=(e)=>{
+      console.log("HELLO WORLD");
+      e.preventDefault();
+      axios.post('http://localhost:4000/sign-in',{
+        username:e.target.username.value,
+        password:e.target.password.value
+      })
+      .then((res)=>{
+         if(res==true){
+            swal("Successfully Logged in","","success");
+         }
+         else{
+            swal("Login Failed","","failure");
+         }
+      })
+      .catch((err)=>{
+          throw err;
+      })
+  }
   let [flag, setflag]= useState(true);
 
   useEffect(()=>{
@@ -33,15 +51,15 @@ function Signin() {
     </div>
 
     <div ng-app ng-init="checked = false">
-				<form className="form-signin" action="" method="post" name="form">
+				<form className="form-signin" action="" method="post" name="form" onSubmit={axiosPost}>
           <label for="username">Username</label>
-          <input className="form-styling" type="text" name="username" placeholder=""/>
+          <input className="form-styling" type="text" id="username" placeholder=""/>
           <label for="password">Password</label>
-          <input className="form-styling" type="text" name="password" placeholder=""/>
+          <input className="form-styling" type="text" id="password" placeholder=""/>
           <input type="checkbox" id="checkbox"/>
           <label for="checkbox" ><span className="ui"></span>Keep me signed in</label>
           <div className="btn-animate">
-            <a className="btn-signin" href="google.com">Sign in</a>
+            <button className="btn-signin">Sign in</button>
           </div>
 				</form>
       </div>
