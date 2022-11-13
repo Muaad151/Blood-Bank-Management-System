@@ -48,7 +48,7 @@ function Donorform() {
               <label for="d_address">Address</label>
               <input class="form-styling" type="text" name="d_address" placeholder="" />
               <label for="date_of_last_donation">date of last donation</label>
-              <input class="form-styling" type="number" name="date_of_last_donation" placeholder="" />
+              <input class="form-styling" type="date" name="date_of_last_donation" placeholder="" />
               <label for="number_of_donations">number of donations</label>
               <input class="form-styling" type="number" name="date_of_last_donation" placeholder="" />
               <label for="d_gender">Gender</label>

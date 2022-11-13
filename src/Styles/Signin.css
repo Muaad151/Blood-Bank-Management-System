@@ -72,6 +72,11 @@ li {
   cursor: pointer;
 }
 
+.abcde:hover{
+  background-color:#de5550;
+  color: #ffffff;
+  transition: all .25s ease;
+}
 
 .signin-inactive button {
   padding-bottom: 0;

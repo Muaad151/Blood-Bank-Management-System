@@ -14,7 +14,7 @@ function Signin() {
         password:e.target.password.value
       })
       .then((res)=>{
-         if(res==true){
+         if(res===true){
             swal("Successfully Logged in","","success");
          }
          else{
@@ -53,13 +53,13 @@ function Signin() {
     <div ng-app ng-init="checked = false">
 				<form className="form-signin" action="" method="post" name="form" onSubmit={axiosPost}>
           <label for="username">Username</label>
-          <input className="form-styling" type="text" id="username" placeholder=""/>
+          <input className="form-styling" type="text" id="username" placeholder="" required />
           <label for="password">Password</label>
-          <input className="form-styling" type="text" id="password" placeholder=""/>
+          <input className="form-styling" type="password" id="password" placeholder=""/>
           <input type="checkbox" id="checkbox"/>
           <label for="checkbox" ><span className="ui"></span>Keep me signed in</label>
-          <div className="btn-animate">
-            <button className="btn-signin">Sign in</button>
+          <div className="" style={{marginTop:"3rem"}}>
+            <button className=" abcde btn-signin">Sign in</button>
           </div>
 				</form>
       </div>
